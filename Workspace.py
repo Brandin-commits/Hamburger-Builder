@@ -1,45 +1,53 @@
 import random
-#Make food items on demand
+#Make a orderable menu
 
-drinks = ['water', 'coca-cola', 'sprite', 'lemonade', 'orange juice', ]
+drinks = ['water', 'coca-cola', 'sprite', 'lemonade', 'orange juice']
 
-protein = ['beef', 'grilled chicken', 'crispy chicken']
+sides = ['fries', 'mashed potatoes', 'veggies', 'salad', 'soup']
 
-main_salad = ['iceberg lettuce', 'kale']
+dessert = ['brownie', 'cheese cake', 'carrot cake']
 
-cheese = ['american', 'provalone', 'chedder', 'swiss', 'pepper jack', 'shredded', 'no']
+food = ['cheese burger', 'grilled cheese', 'BLT', 'fried chicken', 'grilled chicken sandwich']
 
-bun = ['sesame', 'whole wheat', 'lettuce', 'plain']
 
-condiment = ['ketchup', 'mayo', 'mustard']
+def user_order():
+    print(user_food, user_side, user_drink, user_dessert)
 
-topping = ['onion', 'mushroom']
 
-veggies = ['lettuce', 'tomato', 'spinach']
+def user_drink():
+    print('Here are our drink options: ')
 
-dressings = ['italian', 'ranch', 'no', ]
+
+def user_side():
+    print('How about a side? \nThere\'s:' + sides + '\n')
+
+
+def user_dessert():
+    print('What would you like for dessert?\nOur menu consists of: ' + dessert + '\nWhat would you like?: ')
+
+
+def user_food():
+    print('What entree would you like?\nWe have: ' + food + '\nWhat would you like?: ')
+
 
 def burger():
     if user_food == 'burger':
-        print('Here\'s a burger with ' + burger_ingre + ' in it.')
+        print(f'Here\'s a burger with ' + burger_ingre + ' in it.')
+
 
 def salad():
     if user_food == 'salad':
-        print('Here\'s a salad with ' + salad_ingre + ' in it.')
-
-burger_ingre = random.choice(bun), random.choice(protein), random.choice(cheese), random.choice(topping), random.choice(condiment)
-
-salad_ingre = random.choice(main_salad), random.choice(cheese), random.choice(veggies), random.choice(dressings)
+        print(f'Here\'s a salad with ' + salad_ingre + ' in it.')
 
 
+def main():
+    
+    if user_food == 'burger':
+        burger()
+    elif user_food == 'salad':
+        salad()
+    else:
+        print('Option not available. ')
 
-user_food = input('What do you want to make?: ').lower().strip()
 
-
-
-
-
-
-#Print one of each
-print('Here\'s a '+ user_food + ' with a '+  random.choice(protein),', '+ random.choice(cheese),'cheese, '+ random.choice(bun),'bun, '+ random.choice(condiment),'and, '+ random.choice(topping)+'!')
-#ChatGPT used to find out how to use 'random.choice' instead of 'random.protein'
+main()
