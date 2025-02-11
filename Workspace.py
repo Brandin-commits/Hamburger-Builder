@@ -1,4 +1,8 @@
 import random
+
+def getTyoeOfCheese():
+    cheese = ['swiss', 'chedder', 'provalone']
+    return random.choice(cheese)
 #Make hamburger with random ingredients each time
 protein = ['beef']
 
@@ -11,5 +15,5 @@ condiment = ['ketchup', 'mayo', 'mustard']
 topping = ['onion', 'lettuce', 'tomato', 'mushroom']
 
 #Print one of each
-print('Here\'s a hamburger with a '+  random.choice(protein),'patty, '+ random.choice(cheese),'cheese, '+ random.choice(bun),'bun, '+ random.choice(condiment),'and, '+ random.choice(topping)+'!')
+print('Here\'s a hamburger with a '+  random.choice(protein),'patty, '+ getTyoeOfCheese(),'cheese, '+ random.choice(bun),'bun, '+ random.choice(condiment),'and, '+ random.choice(topping)+'!')
 #ChatGPT used to find out how to use 'random.choice' instead of 'random.protein'
