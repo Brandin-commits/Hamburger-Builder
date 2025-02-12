@@ -2,45 +2,48 @@ import random
 #Make a orderable menu
 
 
-
-def user_order():
-    
-    
-    print(f'Here\'s your order: {order})
-
-
 def user_drink():
     drinks = ['water', 'coca-cola', 'sprite', 'lemonade', 'orange juice']
-    print(f'Here are our drink options: {drinks}')
+    drink_choice = input(f'And to drink?\nHere are our options: {drinks}')
+    if drink_choice in drinks:
+        print(f'Good choice on the {drink_choice}.')
+    else:
+        print('That is not on the menu.')
+    
 
 
 def user_side():
     sides = ['fries', 'mashed potatoes', 'veggies', 'salad', 'soup']
-    print(f'How about a side? \nThere\'s:{sides} \n')
+    side_choice = input(f'How about a side? \nThere\'s: {sides} \n')
+    if side_choice in sides:
+        print(f'Good choice on the {side_choice}.')
+    else:
+        print('That is not on the menu.')
+    
 
 
 def user_dessert():
     desserts = ['brownie', 'cheese cake', 'carrot cake']
-    print(f'What would you like for dessert?\nOur menu consists of: {desserts} \nWhat would you like?: ')
+    dessert_choice = input(f'What would you like for dessert?\nOur menu consists of: {desserts} \nWhat would you like?: ')
+    if dessert_choice in desserts:
+        print(f'Good choice on the {dessert_choice}.')
+    else:
+        print('That is not on the menu.')
 
 
 def user_food():
     food = ['cheese burger', 'grilled cheese', 'BLT', 'fried chicken', 'grilled chicken sandwich']
-    print(f'What entree would you like?\nWe have:  {food} \nWhat would you like?: ')
+    food_choice = input(f'What entree would you like?\nWe have: {food} \nWhat would you like?: ').strip().lower()
+    if food_choice in food:
+        print(f'Great you\'ll be having, {food_choice}.')
+    else:
+        print('Sorry we don\'t have that.')
     
-
-def burger():
-    if user_food == 'burger':
-        print(f'Here\'s a burger with {burger} in it.')
-
-
-def salad():
-    if user_food == 'salad':
-        print(f'Here\'s a salad with {salad} in it.')
 
 
 def main():
+    print('Hi welcome to the restaurant!')
     user_food()
 
-
-main()
+user_food()
+user_drink()
