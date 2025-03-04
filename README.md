@@ -1,2 +1,2 @@
 # Hamburger-Builder
-Make this build different burgers using one of each ingredient 
+Make a restaurant to take an order
